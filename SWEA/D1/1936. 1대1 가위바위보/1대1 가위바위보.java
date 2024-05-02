@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        // 1 = Scissors 2 = Rock 3 = Paper
+        // 1 < 2, 2 < 3, 3 < 1;
+
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+
+        if (A == 1 && B == 3) {
+            System.out.println("A");
+        } else if (A == 3 && B == 1) {
+            System.out.println("B");
+        } else if (A >= 1 && A <=3 && B>=1 && B<=3) {
+            if (A < B) {
+                System.out.println("B");
+            } else if (A > B) {
+                System.out.println("A");
+            } else {
+                System.out.println("비김");
+            }
+        } else {
+            System.out.println("나올 수 없는 경우입니다.");
+        }
+    }
+}
